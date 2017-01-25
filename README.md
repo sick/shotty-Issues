@@ -12,7 +12,7 @@ docker pull shotty/main
 # Run shotty image
 # Replace [/path/to/storage] with an actual path to you storage. Here will be stored media files and database
 # this is the only location that you need to backup. It is your responsibility!
-docker run --name shotty -v [/path/to/storage]:/media/shotty -p 8888:8888 -p 80:80 -p 443:443 -h shotty.local shotty/main
+docker run --name shotty -v [/path/to/storage]:/media/shotty [-v [/path/to/ssl-keys-storage]:/home/config/ssl/keys] -p 8888:8888 -p 80:80 -p 443:443 -h shotty.local shotty/main
 ```
 
 ### Run this once after first launch. DO NOT RUN THIS AFTER UPDATES!
