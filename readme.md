@@ -20,7 +20,7 @@ docker run --name shotty -v [/path/to/storage]:/media/shotty [[-v [/path/to/ssl-
 `docker exec -it shotty /home/config/rdb/setup.sh`
 
 ### Create/update Let's Encrypt SSL keys
-`docker exec -it shotty /home/config/le/update-key your-domain.com`
+[Read here](letsencrypt.md)
 
 ### if something is going wrong use this
 `docker rm $(docker ps -a -q)`
