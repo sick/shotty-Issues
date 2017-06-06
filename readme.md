@@ -18,7 +18,7 @@ docker run --name shotty -v [/path/to/storage]:/media/shotty [[-v [/path/to/ssl-
 ### creating volume drives 
 ```shell
 docker volume create --label shotty --name shotty1
-docker run --name shotty --restart=always -v shotty1:/media/shotty -p 8888:8888 -p 80:80 -p 443:443 -h shotty.local shotty/main
+docker run --name shotty --restart=always -d -v shotty1:/media/shotty -p 8888:8888 -p 80:80 -p 443:443 -h shotty.local shotty/main
 ```
 
 ### Run this once after first launch. DO NOT RUN THIS AFTER UPDATES!
